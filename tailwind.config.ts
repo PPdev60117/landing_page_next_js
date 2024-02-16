@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+    },
+    keyframes:{
+      fade :{
+        '0%':{filter:'brightness.50'},
+        '100%':{filter:'brightness.50'}
       },
     },
+    animation:{
+      fade : 'fade 1s ease-in'
+    }
   },
   plugins: [],
 };
