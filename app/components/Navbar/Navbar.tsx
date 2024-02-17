@@ -55,17 +55,17 @@ export default function Navbar({
           <Link href={'/'} className='flex'><div className='flex'>
             <h1 className='text-2xl text-white m-auto prompt-regular'>LOGO</h1>
           </div></Link>
-          <div className='flex'>
-            {!toggle && <MenuRoundedIcon onClick={()=>setToggle(toggle?false:true)} className='cursor-pointer sm:hidden m-auto text-3xl m-1 text-white'/>}
+          <div className='flex sm:hidden'>
+            {!toggle && <MenuRoundedIcon sx={{ fontSize: 40 }} onClick={()=>{setToggle(toggle?false:true)}} className='cursor-pointer flex sm:hidden m-auto text-3xl text-white'/>}
           </div>
             <div className={`${toggle?'translate-x-0 opacity-100':'translate-x-full opacity-0'} z-50 sm:opacity-100 w-full sm:translate-x-0 transition-translate duration-700 ease-out sm:transition-none fixed flex h-screen bg-black top-0 left-0 sm:h-auto sm:bg-inherit sm:static`}>
               <ul className={`sm:flex text-md m-auto sm:mr-0 `}> 
                 {menus.map((menu:Menus,num:number)=>{
                     return(                   
-                      <Link key={num} href={menu.link}><li className='text-center hover:bg-[#3d6061] prompt-regular hover:text-[#e6e6e6] hover:rounded-md py-2 text-[#F5F5F5] px-4'>{menu.name}</li></Link>
+                      <Link onClick={()=>setToggle(!toggle)} key={num} href={menu.link}><li className='text-center hover:bg-[#3d6061] prompt-regular hover:text-[#e6e6e6] hover:rounded-md py-2 text-[#F5F5F5] px-4'>{menu.name}</li></Link>
                     )
                 })}
-                <li onClick={()=>setToggle(!toggle)} className='sm:hidden text-white text-center cursor-pointer'><CloseRoundedIcon/></li>
+                <li onClick={()=>setToggle(!toggle)} className='sm:hidden text-white text-center cursor-pointer'><CloseRoundedIcon sx={{ fontSize: 40 }}/></li>
               </ul>
             </div>
         </div>

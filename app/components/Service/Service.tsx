@@ -17,11 +17,7 @@ interface Service {
 export default function Service() {
   return (
     <>
-        <motion.div id='service' className='flex my-5 flex-col relative mt-[80px]'
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true ,amount:0.8}}
-        >
+        <motion.div id='service' className='flex my-5 flex-col relative mt-[80px]'>
             
             <div className='absolute bg-[#3d60614d] w-96 h-96 rounded-full -right-[150px] -top-[100px] '></div>
 
@@ -34,7 +30,11 @@ export default function Service() {
                 {Service_info.map((data:Service)=>{
                     return(
                         <>
-                            <div className="flex flex-col md:last:col-span-2 lg:last:col-span-1 lg:even:scale-[1.1] md:last:scale-[1.02] md:last:mt-5 lg:last:scale-[1] lg:last:mt-0 drop-shadow-2xl">
+                            <motion.div 
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{ once: true ,amount:0.8}}
+                            className="flex flex-col md:last:col-span-2 lg:last:col-span-1 lg:even:scale-[1.1] md:last:scale-[1.02] md:last:mt-5 lg:last:scale-[1] lg:last:mt-0 drop-shadow-2xl">
                                 <motion.div className="w-80 h-80 m-auto"
                                     variants={cardVariants}
                                     whileHover={{ scale: 1.2 }}
@@ -48,7 +48,7 @@ export default function Service() {
                                     <h1 className="odd:text-2xl even:text-3xl mb-1">{data.name}</h1>
                                     <p className="text-sm text-gray-500">{data.content}</p>
                                 </motion.div>
-                            </div>
+                            </motion.div>
                         </>
                     )
                 })}

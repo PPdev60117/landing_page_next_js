@@ -11,10 +11,10 @@ interface solution {
 }
 
 
-const solution = [{icon:<HomeWorkOutlinedIcon className='m-auto text-6xl text-white'/>,name:'ออกแบบสถาปัตยกรรม'},
-{icon:<EngineeringOutlinedIcon className='m-auto text-6xl text-white'/>,name:'วิศวกรวิเคราะห์โครงสร้าง'},
-{icon:<AccountBalanceOutlinedIcon className='m-auto text-6xl text-white'/>,name:'ดำเนินการกู้แบงค์ให้สำหรับลูกค้า'},
-{icon:<AddOutlinedIcon className='m-auto text-6xl text-white'/>,name:'ดูแลความเรียบร้อยจนจบงานก่อนสร้าง'}
+const solution = [{icon:<HomeWorkOutlinedIcon sx={{ fontSize: 50 }} className='m-auto  text-white'/>,name:'ออกแบบสถาปัตยกรรม'},
+{icon:<EngineeringOutlinedIcon sx={{ fontSize: 50 }} className='m-auto text-white'/>,name:'วิศวกรวิเคราะห์โครงสร้าง'},
+{icon:<AccountBalanceOutlinedIcon sx={{ fontSize: 50 }} className='m-auto text-white'/>,name:'ดำเนินการกู้แบงค์ให้สำหรับลูกค้า'},
+{icon:<AddOutlinedIcon sx={{ fontSize: 50 }} className='m-auto text-white'/>,name:'ดูแลความเรียบร้อยจนจบงานก่อนสร้าง'}
 ]
 
 export default function Solution() {

@@ -15,6 +15,26 @@
     transition: all .05s;
     animation: reveal ease-in-out .8s;
     animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+  }
+
+  .logo-fade-r {
+    transition: all .05s;
+    animation: logoleft ease-in .8s;
+    animation-fill-mode: forwards;
+  }
+
+  .logo-fade-l {
+    transition: all .05s;
+    animation: logoright ease-in .8s;
+    animation-fill-mode: forwards;
+  }
+
+  .face-fade {
+    transition: all .05s;
+    animation: logo-reverse ease-in .8s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
   }
 
   @keyframes reveal {
@@ -35,6 +55,34 @@
     }
     to{
       filter: brightness(50%);
+    }
+  }
+
+  @keyframes logoright {
+    from{
+      width: 0;
+    }
+    to{
+      width: 100%;
+    }
+  }
+
+  @keyframes logoleft {
+    from{
+      height: 0;
+    }
+    to{
+      height: 100%;
+    }
+  }
+
+  @keyframes logo-reverse {
+    from{
+      width: 100%;
+    }
+    to{
+      width: 0;
+      display: none;
     }
   }
 }
