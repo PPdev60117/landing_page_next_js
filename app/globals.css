@@ -37,7 +37,7 @@
     animation-delay: 1s;
   }
 
-  .face-fade {
+  .logo-fade {
     transition: all .05s;
     animation: logo-re ease-in .8s;
     animation-fill-mode: forwards;
