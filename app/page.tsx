@@ -12,7 +12,7 @@ export default function Home() {
       <div className="face-fade w-screen h-screen z-[999999] fixed bg-white top-0 left-0">
         <div className="w-full h-full flex">
           <div className="m-auto">
-          <div className="w-20 h-20 relative">
+          <div className="w-20 h-20 relative face-fade">
         <div className="logo-fade-r h-full absolute w-2 bg-[#2C4546] left-0"></div>
         <div className="logo-fade-l w-full absolute h-2 bg-[#2C4546] left-0"></div>
         <div className="logo-fade-r h-full absolute w-2 bg-[#2C4546] right-0"></div>
